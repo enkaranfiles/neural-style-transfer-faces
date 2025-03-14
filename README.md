@@ -3,6 +3,7 @@
 ## Project Overview
 
 1- Creating a synthetic paired dataset of bearded and clean-shaven images
+
 2- Training an *image*-to-image (img2img) generative model.
 
 ---
