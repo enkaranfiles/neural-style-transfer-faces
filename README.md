@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This case study evaluates your ability to work with generative AI models, focusing on creating a synthetic paired dataset of bearded and clean-shaven images and training an *image*-to-image (img2img) generative model. The project should be structured and implemented to meet production-level quality standards.
+1- Creating a synthetic paired dataset of bearded and clean-shaven images
+2- Training an *image*-to-image (img2img) generative model.
 
 ---
 
@@ -84,14 +85,6 @@ training:
   checkpoint_interval: 10
   device_ids: [0, 1]
 ```
-
----
-
-## Deliverables
-
-For further explanation and demo results, refer to the `deliverable.ipynb` notebook.
-
----
 
 ## Notes
 
