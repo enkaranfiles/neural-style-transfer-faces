@@ -1,0 +1,38 @@
+paired_data:
+  base_image_dir: "dataset-test/test/base_image"
+  beared_dir: "dataset-test/test/beared"
+  mask_dir: "dataset-test/test/mask"
+  predictor_path: "shape_predictor_68_face_landmarks.dat"
+  positive_prompt: "A high-resolution portrait of a clean-shaven man, looking directly at the camera, photographed in natural light."
+  negative_prompt: "disfigured, ugly, bad, immature, cartoon, anime, 3d, painting, b&w, worst quality, low quality, off-center, blurred eyes"
+  model_id: "SG161222/RealVisXL_V5.0"
+  num_images: 2
+  width: 512
+  height: 512
+
+inpainting:
+  prompt_beard: "full, thick, and natural beard that shows individual hair strands"
+  num_inference_steps: 50
+  guidance_scale: 10
+  strength: 0.99
+
+dataset:
+  base_dir: "dataset/train/base_image"
+  beard_dir: "dataset/train/beared"
+  mean: [0.55, 0.48, 0.42]
+  std: [0.22, 0.21, 0.21]
+
+training:
+  batch_size: 64
+  num_epochs: 100
+  use_perceptual_loss: true
+  perceptual_weight: 0.1
+  lr: 0.0002
+  lr_step: 30
+  lr_gamma: 0.5
+  l1_weight: 100
+  checkpoint_dir: "checkpoints-test/experiment_3"
+  checkpoint_interval: 10
+  device_ids: [0, 1]
+  n_blocks: 9
+
